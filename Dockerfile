@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.7.2
+FROM hashicorp/terraform:0.7.3
 
 RUN apk update && apk add \
   ca-certificates \
