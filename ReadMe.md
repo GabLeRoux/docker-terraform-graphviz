@@ -21,7 +21,7 @@ docker run --rm -it \
   -v "$PWD:/app" \
   -v "$HOME/.aws:/root/.aws/" \
   -v "$HOME/.ssh:/root/.ssh/" \
-  gableroux/terraform-graphviz:latest
+  gableroux/terraform-graphviz:light
     sh -c "terraform graph -draw-cycles | dot -Tsvg -o graph.svg"
 ```
 
@@ -32,7 +32,7 @@ version: '3'
 services:
   # official terraform image
   terraform:
-    image: hashicorp/terraform:latest
+    image: hashicorp/terraform:light
     env_file: .env
     volumes:
       - "$PWD:/app"
@@ -41,7 +41,7 @@ services:
     working_dir: /app
   # image based on official image with graphviz addition, only use when you when you want ot generate graphs
   terraform-graphviz:
-    image: gableroux/terraform-graphviz:latest
+    image: gableroux/terraform-graphviz:light
     env_file: .env
     volumes:
       - "$PWD:/app"
@@ -59,7 +59,7 @@ stages:
 
 terraform_validate:
   stage: test
-  image: hashicorp/terraform:latest
+  image: hashicorp/terraform:light
   script:
     - cp .env.example .env
     - terraform init
