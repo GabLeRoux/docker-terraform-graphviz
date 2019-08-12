@@ -9,7 +9,6 @@ Docker image to use [`terraform`](https://www.terraform.com/) and graphviz to ma
 [![Image](https://images.microbadger.com/badges/image/gableroux/terraform-graphviz.svg)](https://microbadger.com/images/gableroux/terraform-graphviz)
 [![Version](https://images.microbadger.com/badges/version/gableroux/terraform-graphviz.svg)](https://microbadger.com/images/gableroux/terraform-graphviz)
 [![Layers](https://images.microbadger.com/badges/image/gableroux/terraform-graphviz.svg)](https://microbadger.com/images/gableroux/terraform-graphviz)
-[![Requirements Status](https://requires.io/github/GabLeRoux/terraform-docker-image/requirements.svg)](https://requires.io/github/GabLeRoux/terraform-docker-image/requirements/)
 
 ## Usage
 
